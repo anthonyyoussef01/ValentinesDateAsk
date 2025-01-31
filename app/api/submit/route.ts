@@ -30,8 +30,9 @@ export async function POST(request: Request) {
       `,
     };
     
-    await transporter.verify();
-    await transporter.sendMail(mailOptions);
+    //TODO: enable these lines when you're ready to send emails
+    // await transporter.verify();
+    // await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Email error:', error);
